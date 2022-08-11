@@ -1,0 +1,91 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e555c;
+  color: white;
+
+  user-select: none;
+}
+
+/* $width: 440px; */
+
+.clock {
+  text-align: center;
+  font-size: 2.5em;
+  transform: scale(0.7);
+}
+
+
+.clock > .length-setters {
+  margin: 0.25em;
+
+  display: flex;
+  flex-direction: column;
+  /* background-color: black; */
+}
+.length-setters > .length-setter {
+  margin: 0 0.5em;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: inherit;
+  color: inherit;
+}
+.display {
+  width: max-content;
+  margin: 0 auto;
+  border: 5px solid black;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+.imminent {
+  color: red;
+}
+button:hover {
+  color: red;
+}
+.time-left {
+  font-size: 2em;
+  /* background-color: red; */
+}
+
+@media screen and (min-width: 460px) {
+  .clock {
+    transform: scale(1);
+    /* background-color: aliceblue; */
+  }
+  .clock > .length-setters {
+    flex-direction: row;
+
+  }
+}
+.length-setter {
+  font-size: 0.8em;
+}
+.design {
+  font-size: 0.5em;
+  color: coral;
+}
+.author {
+  font-size: 0.5em;
+  color: #000;
+}
